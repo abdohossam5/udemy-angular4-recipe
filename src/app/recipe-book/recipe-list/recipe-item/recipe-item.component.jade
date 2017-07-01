@@ -1,0 +1,6 @@
+a.list-group-item.clearfix()
+  .pull-left
+    h4.list-group-item-heading {{ recipe.name }}
+    p.list-group-item-text {{ recipe.description }}
+  .pull-right
+    img.img-responsive(style="max-height:50px;", [src]="recipe.imgUrl", [alt] = "recipe.name")

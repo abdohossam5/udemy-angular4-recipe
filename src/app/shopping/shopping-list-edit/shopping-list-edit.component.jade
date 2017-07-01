@@ -1,0 +1,16 @@
+.row
+  .col-xs-12
+    form
+      .row
+        .col-sm-5.form-group
+          label(for="name") Name
+          input.form-control(id="name", type="text", #nameInput)
+        .col-sm-2.form-group
+          label(for="amount") Amount
+          input.form-control(id="amount", type="number", #amountInput)
+      .row
+        .col-xs-12
+          button.btn.btn-success(type="submit", (click)='add()') Add
+          button.btn.btn-danger(type="button") Delete
+          button.btn.btn-primary(type="button") Clear
+

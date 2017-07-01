@@ -1,0 +1,7 @@
+.row
+  .col-md-5
+    app-recipe-list([recipes]='recipes')
+  .col-md-7
+    app-recipe-detail([recipe] = "selectedRecipe", *ngIf="selectedRecipe; else placeholder")
+    ng-template(#placeholder)
+      p Please Select Recipe

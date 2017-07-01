@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+
+<!--Created by abdomokhtar on 03/06/2017.
+-->
+<app-header (viewChanged)="viewChanged($event)"></app-header>
+<div class="container">
+  <!--.row(*ngIf="activeView === 'recipes'")app-recipe
+  -->
+  <!--.row(*ngIf="activeView !== 'recipes'")app-shopping-list
+  -->
+  <router-outlet></router-outlet>
+</div>

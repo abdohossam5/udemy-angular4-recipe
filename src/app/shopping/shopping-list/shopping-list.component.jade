@@ -1,0 +1,10 @@
+//
+   Created by abdomokhtar on 03/06/2017.
+
+.container
+  .row
+    .col-xs-10
+      app-shopping-list-edit()
+      hr
+      ul.list-group
+        li.list-group-item(style="cursor:pointer", *ngFor="let i of ingredients") {{ i.name }} ({{ i.amount}})

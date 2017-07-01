@@ -1,0 +1,24 @@
+.row
+  .col-xs-12
+    img.img-responsive(src="{{recipe.imgUrl}}")
+.row
+  .col-xs-12
+    h1 {{ recipe.name }}
+.row
+  .col-xs-12
+    .btn-group(appDropdown)
+      button.btn.btn-primary.dropdown-toggle Manage #[span.caret]
+      ul.dropdown-menu
+        li
+          a(href="#", (click)= "addToShoppingList()") To Shopping List
+          a(href="#") Edit Recipe
+          a(href="#") Delete Recipe
+.row
+  .col-xs-12
+    h4 Description
+    .col-xs-12 {{ recipe.description }}
+.row
+  .col-xs-12
+    h4 Ingredients
+    ul
+      li(*ngFor="let i of recipe.ingredients") {{ i.name }} - {{ i.amount }}

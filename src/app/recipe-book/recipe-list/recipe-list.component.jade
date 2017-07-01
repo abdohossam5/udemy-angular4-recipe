@@ -1,0 +1,7 @@
+.row
+  .col-xs-12
+    button.btn.btn-success New Recipe
+hr
+.row
+  .col-xs-12
+    app-recipe-item(*ngFor="let r of recipes", [recipe] = "r", (click) = "recipeChanged(r)")
