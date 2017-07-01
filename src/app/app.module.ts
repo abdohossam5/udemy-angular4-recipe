@@ -14,7 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import {RecipesService} from './shared/recipes.service';
 import {ShoppingService} from './shared/shopping.service';
-import {RoutesModule} from './routes.module';
+import {RoutesModule} from './routes-routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {RoutesModule} from './routes.module';
     RecipeDetailComponent,
     HeaderComponent,
     RecipeComponent,
-    DropdownDirective
+    DropdownDirective,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
