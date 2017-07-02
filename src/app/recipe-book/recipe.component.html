@@ -4,9 +4,9 @@
     <app-recipe-list [recipes]="recipes"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail [recipe]="selectedRecipe" *ngIf="selectedRecipe; else placeholder"></app-recipe-detail>
-    <ng-template #placeholder>
-      <p>Please Select Recipe</p>
-    </ng-template>
+    <!--app-recipe-detail([recipe] = "selectedRecipe", *ngIf="selectedRecipe; else placeholder")-->
+    <!--ng-template(#placeholder)p Please Select Recipe
+    -->
+    <router-outlet></router-outlet>
   </div>
 </div>

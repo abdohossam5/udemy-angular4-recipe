@@ -1,4 +1,4 @@
-a.list-group-item.clearfix()
+a.list-group-item.clearfix([routerLink]="['/recipes/view', recipe.id]", routerLinkActive="active-recipe")
   .pull-left
     h4.list-group-item-heading {{ recipe.name }}
     p.list-group-item-text {{ recipe.description }}

@@ -16,6 +16,8 @@ import {RecipesService} from './shared/recipes.service';
 import {ShoppingService} from './shared/shopping.service';
 import {RoutesModule} from './routes-routing.module';
 import { ErrorComponent } from './error/error.component';
+import {ErrorMsgResolver} from './error/error-msg-resolver.service';
+import {RecipeResolver} from './recipe-book/recipe-detail/recipe-resolver.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ErrorComponent } from './error/error.component';
   ],
   providers: [
     RecipesService,
-    ShoppingService
+    ShoppingService,
+    ErrorMsgResolver,
+    RecipeResolver
   ],
   bootstrap: [AppComponent]
 })
