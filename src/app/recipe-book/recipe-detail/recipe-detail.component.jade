@@ -10,9 +10,9 @@
       button.btn.btn-primary.dropdown-toggle Manage #[span.caret]
       ul.dropdown-menu
         li
-          a(href="#", (click)= "addToShoppingList()") To Shopping List
-          a(href="#") Edit Recipe
-          a(href="#") Delete Recipe
+          a(style= "cursor:pointer" ,(click)= "addToShoppingList()") To Shopping List
+          a(style= "cursor:pointer", [routerLink]="['/recipes/edit']", [queryParams]="{id: recipe.id}") Edit Recipe
+          a(style= "cursor:pointer") Delete Recipe
 .row
   .col-xs-12
     h4 Description

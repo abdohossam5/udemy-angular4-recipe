@@ -6,11 +6,11 @@
     <div class="navbar-header"><a class="navbar-brand">Recipe Book</a></div>
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a routerLink="/recipes" routerLinkActive="active">Recipes</a></li>
-        <li><a routerLink="/shopping" routerLinkActive="active">Shopping List</a></li>
+        <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shopping">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li appDropdown="appDropdown" class="dropdown"><a class="dropdown-toggle">Manage <span role="button" class="caret"></span></a>
+        <li appDropdown="appDropdown" class="dropdown"><a style="cursor:pointer" class="dropdown-toggle">Manage <span role="button" class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Save Date</a></li>
             <li><a href="#">Fetch Date</a></li>

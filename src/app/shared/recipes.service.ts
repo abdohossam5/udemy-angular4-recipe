@@ -32,4 +32,8 @@ export class RecipesService {
       resolve(recipe);
     });
   }
+
+  getNextId(): number {
+    return this._recipes.length + 1;
+  }
 }

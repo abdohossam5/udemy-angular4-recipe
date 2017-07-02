@@ -18,6 +18,8 @@ import {RoutesModule} from './routes-routing.module';
 import { ErrorComponent } from './error/error.component';
 import {ErrorMsgResolver} from './error/error-msg-resolver.service';
 import {RecipeResolver} from './recipe-book/recipe-detail/recipe-resolver.service';
+import { RecipeStartComponent } from './recipe-book/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {RecipeResolver} from './recipe-book/recipe-detail/recipe-resolver.servic
     HeaderComponent,
     RecipeComponent,
     DropdownDirective,
-    ErrorComponent
+    ErrorComponent,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

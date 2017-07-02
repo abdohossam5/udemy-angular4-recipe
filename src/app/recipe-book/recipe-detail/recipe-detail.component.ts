@@ -1,11 +1,11 @@
 /**
  * Created by abdomokhtar on 03/06/2017.
  */
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from '../recipe.model';
 import {RecipesService} from '../../shared/recipes.service';
 import {ShoppingService} from '../../shared/shopping.service';
-import {ActivatedRoute, Data} from '@angular/router';
+import {ActivatedRoute, Data, Router} from '@angular/router';
 @Component({
   selector: 'app-recipe-detail',
   templateUrl: 'recipe-detail.component.html',
@@ -16,7 +16,8 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private RecipesService: RecipesService,
               private ShoppingService: ShoppingService,
-              private ActivatedRoute: ActivatedRoute
+              private ActivatedRoute: ActivatedRoute,
+              private router: Router
   ) {}
 
 
@@ -32,5 +33,6 @@ export class RecipeDetailComponent implements OnInit {
 
   addToShoppingList() {
     this.ShoppingService.addRecipeImgredients(this.recipe);
+    this.router.navigate(['shopping']);
   }
 }

@@ -1,0 +1,14 @@
+.container
+  .col-md-6.col-sm-12
+    form(name="recipeForm")
+      .form-group
+        label(for="name") Name
+        input.form-control(id="name", name='name', [(ngModel)]="data.name", required)
+      .form-group
+        label(for="description") Description
+        input.form-control(id="description", name='description', [(ngModel)]="data.description", required)
+      .form-group
+        label(for="image") Image Url
+        input.form-control(id="image", name='image', [(ngModel)]="data.imgUrl", required)
+        img.help-block.img-thumbnail(style="width: 200px;",[src]="data.imgUrl || 'assets/placeholder.png'")
+      button.btn.btn-primary(type="submit") Submit

@@ -8,6 +8,8 @@ import {RecipeDetailComponent} from './recipe-book/recipe-detail/recipe-detail.c
 import {ErrorComponent} from './error/error.component';
 import {ErrorMsgResolver} from './error/error-msg-resolver.service';
 import {RecipeResolver} from './recipe-book/recipe-detail/recipe-resolver.service';
+import {RecipeStartComponent} from './recipe-book/recipe-start/recipe-start.component';
+import {RecipeEditComponent} from './recipe-book/recipe-edit/recipe-edit.component';
 
 
 const routes: Routes = [
@@ -21,9 +23,17 @@ const routes: Routes = [
     component: RecipeComponent,
     children: [
       {
+        path: '',
+        component: RecipeStartComponent
+      },
+      {
         path: 'view/:id',
         component: RecipeDetailComponent,
         resolve: {recipe: RecipeResolver}
+      },
+      {
+        path: 'edit',
+        component: RecipeEditComponent
       }
     ]
   },

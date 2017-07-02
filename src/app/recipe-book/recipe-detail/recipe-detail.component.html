@@ -12,7 +12,7 @@
     <div appDropdown="appDropdown" class="btn-group">
       <button class="btn btn-primary dropdown-toggle">Manage <span class="caret"></span></button>
       <ul class="dropdown-menu">
-        <li><a href="#" (click)="addToShoppingList()">To Shopping List</a><a href="#">Edit Recipe</a><a href="#">Delete Recipe</a></li>
+        <li><a style="cursor:pointer" (click)="addToShoppingList()">To Shopping List</a><a style="cursor:pointer" [routerLink]="['/recipes/edit']" [queryParams]="{id: recipe.id}">Edit Recipe</a><a style="cursor:pointer">Delete Recipe</a></li>
       </ul>
     </div>
   </div>

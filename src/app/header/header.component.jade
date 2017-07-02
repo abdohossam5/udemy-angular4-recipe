@@ -6,13 +6,13 @@
       a.navbar-brand Recipe Book
     .navbar-default
       ul.nav.navbar-nav
-        li
-          a(routerLink="/recipes", routerLinkActive="active") Recipes
-        li
-          a(routerLink="/shopping", routerLinkActive="active") Shopping List
+        li(routerLinkActive="active")
+          a(routerLink="/recipes") Recipes
+        li(routerLinkActive="active")
+          a(routerLink="/shopping") Shopping List
       ul.nav.navbar-nav.navbar-right
         li.dropdown(appDropdown)
-          a.dropdown-toggle() Manage #[span.caret(role="button")]
+          a.dropdown-toggle(style="cursor:pointer") Manage #[span.caret(role="button")]
           ul.dropdown-menu()
             li
               a(href="#") Save Date

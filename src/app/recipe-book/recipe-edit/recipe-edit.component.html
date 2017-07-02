@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="col-md-6 col-sm-12">
+    <form name="recipeForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" [(ngModel)]="data.name" required="required" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input id="description" name="description" [(ngModel)]="data.description" required="required" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="image">Image Url</label>
+        <input id="image" name="image" [(ngModel)]="data.imgUrl" required="required" class="form-control"/><img style="width: 200px;" [src]="data.imgUrl || 'assets/placeholder.png'" class="help-block img-thumbnail"/>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
